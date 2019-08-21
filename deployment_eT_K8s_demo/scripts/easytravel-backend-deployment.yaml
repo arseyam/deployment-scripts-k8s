@@ -28,7 +28,7 @@ spec:
           value: easytravel-mongodb:27017
         - name: ET_PLUGIN_SERVICE_LOCATION
           value: easytravel-pluginservice:8080
-        image: docker.lab.dynatrace.org:6000/easytravel/easytravel-backend:k8s
+        image: dynatrace/easytravel-backend
         imagePullPolicy: "Always"
         name: easytravel-backend
         resources:
