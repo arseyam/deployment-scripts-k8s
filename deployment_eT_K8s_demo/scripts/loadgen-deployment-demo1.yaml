@@ -28,7 +28,7 @@ spec:
           value: http://ls-cs-s11v.dynatrace.vmta:30683
         - name: ET_PROBLEMS
           value: BadCacheSynchronization,CPULoad,DatabaseCleanup,DatabaseSlowdown,FetchSizeTooSmall,JourneySearchError404,JourneySearchError500,LoginProblems,MobileErrors,TravellersOptionBox
-        image: docker.lab.dynatrace.org:6000/easytravel/easytravel-loadgen:k8s
+        image: dynatrace/easytravel-loadgen
 #        imagePullPolicy: Always
         name: loadgen
         resources: {}
