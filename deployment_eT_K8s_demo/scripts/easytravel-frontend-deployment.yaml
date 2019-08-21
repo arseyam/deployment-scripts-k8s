@@ -26,7 +26,7 @@ spec:
           value: -Dconfig.apmServerDefault=APM -Xmx525m -Djava.security.egd=file:/dev/./urandom
         - name: ET_BACKEND_URL
           value: http://easytravel-backend:8080
-        image: docker.lab.dynatrace.org:6000/easytravel/easytravel-frontend:k8s
+        image: dynatrace/easytravel-frontend
         imagePullPolicy: "Always"
         name: easytravel-frontend
         ports:
