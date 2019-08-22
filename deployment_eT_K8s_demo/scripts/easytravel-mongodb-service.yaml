@@ -8,7 +8,7 @@ metadata:
   labels:
     io.kompose.service: easytravel-mongodb
   name: easytravel-mongodb
-  namespace: easyTravel
+  namespace: easytravel
 spec:
   ports:
   - name: "27017"
