@@ -25,7 +25,7 @@ spec:
         - name: ET_APM_SERVER_DEFAULT
           value: APM
         - name: ET_FRONTEND_URL
-          value: http://ls-cs-s11v.dynatrace.vmta:30683
+          value: http://easytravel-frontend:8080
         - name: ET_PROBLEMS
           value: BadCacheSynchronization,CPULoad,DatabaseCleanup,DatabaseSlowdown,FetchSizeTooSmall,JourneySearchError404,JourneySearchError500,LoginProblems,MobileErrors,TravellersOptionBox
         image: dynatrace/easytravel-loadgen

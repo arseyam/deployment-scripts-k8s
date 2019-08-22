@@ -16,6 +16,6 @@ spec:
     nodePort: 30683
   selector:
     io.kompose.service: easytravel-frontend
-  type: LoadBalancer
+  type: NodePort
 status:
   loadBalancer: {}

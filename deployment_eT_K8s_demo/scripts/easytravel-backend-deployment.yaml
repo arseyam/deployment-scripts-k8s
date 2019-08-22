@@ -26,8 +26,6 @@ spec:
           value: -Dconfig.apmServerDefault=APM -Djava.security.egd=file:/dev/./urandom
         - name: ET_DATABASE_LOCATION
           value: easytravel-mongodb:27017
-        - name: ET_PLUGIN_SERVICE_LOCATION
-          value: easytravel-pluginservice:8080
         image: dynatrace/easytravel-backend
         imagePullPolicy: "Always"
         name: easytravel-backend
