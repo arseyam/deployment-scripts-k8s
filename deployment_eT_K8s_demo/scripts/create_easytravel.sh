@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Creating easyTravel"
-./setup_demo1.sh
+./setup_easytravel.sh
 ./create.sh
 
 echo "Exposing easyTravel"
