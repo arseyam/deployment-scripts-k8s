@@ -8,6 +8,7 @@ metadata:
   labels:
     io.kompose.service: loadgen
   name: loadgen
+  namespace: easyTravel
 spec:
   replicas: 1
   strategy: {}
