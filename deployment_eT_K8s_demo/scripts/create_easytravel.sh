@@ -1,7 +1,8 @@
 #!/bin/sh
 
-echo "Creating easyTravel"
-./setup_easytravel.sh
+#!./setup_base.sh
+echo "Setting up easyTravel"
+kubectl create namespace easyTravel
 
 #!./create.sh
 echo "Creating easyTravel"
