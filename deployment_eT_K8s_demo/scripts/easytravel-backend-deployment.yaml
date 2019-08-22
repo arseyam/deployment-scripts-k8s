@@ -8,6 +8,7 @@ metadata:
   labels:
     io.kompose.service: easytravel-backend
   name: easytravel-backend
+  namespace: easyTravel
 spec:
   replicas: 2
   strategy: {}
