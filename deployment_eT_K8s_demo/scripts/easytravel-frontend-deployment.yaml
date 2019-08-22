@@ -10,7 +10,7 @@ metadata:
   name: easytravel-frontend
   namespace: easytravel
 spec:
-  replicas: 2
+  replicas: 1
   strategy: {}
   template:
     metadata:
@@ -24,7 +24,7 @@ spec:
       containers:
       - env:
         - name: CATALINA_OPTS
-          value: -Dconfig.apmServerDefault=APM -Xmx525m -Djava.security.egd=file:/dev/./urandom
+          value: -Dconfig.apmServerDefault=APM -Xmx525m
         - name: ET_BACKEND_URL
           value: http://easytravel-backend:8080
         image: dynatrace/easytravel-frontend

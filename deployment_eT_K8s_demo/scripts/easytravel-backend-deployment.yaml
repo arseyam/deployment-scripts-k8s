@@ -10,7 +10,7 @@ metadata:
   name: easytravel-backend
   namespace: easytravel
 spec:
-  replicas: 2
+  replicas: 1
   strategy: {}
   template:
     metadata:
@@ -24,7 +24,7 @@ spec:
       containers:
       - env:
         - name: CATALINA_OPTS
-          value: -Dconfig.apmServerDefault=APM -Djava.security.egd=file:/dev/./urandom
+          value: -Dconfig.apmServerDefault=APM
         - name: ET_DATABASE_LOCATION
           value: easytravel-mongodb:27017
         image: dynatrace/easytravel-backend
