@@ -8,7 +8,7 @@ metadata:
   labels:
     io.kompose.service: easytravel-frontend
   name: easytravel-frontend
-  namespace: easyTravel
+  namespace: easytravel
 spec:
   ports:
   - name: "8080"
