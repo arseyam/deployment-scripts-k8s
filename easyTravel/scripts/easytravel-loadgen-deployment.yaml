@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -10,16 +10,25 @@ metadata:
   name: loadgen
   namespace: easytravel
 spec:
+  progressDeadlineSeconds: 2147483647
   replicas: 1
-  strategy: {}
+  revisionHistoryLimit: 2147483647
+  selector:
+    matchLabels:
+      io.kompose.service: loadgen
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
   template:
     metadata:
+      annotations:
+        support.channel: '#team-demoability'
+        support.contact: demoability@dynatrace.com
       creationTimestamp: null
       labels:
         io.kompose.service: loadgen
-      annotations:
-        support.contact: "demoability@dynatrace.com"
-        support.channel: "#team-demoability"
     spec:
       containers:
       - env:
@@ -32,8 +41,14 @@ spec:
         - name: ET_PROBLEMS
           value: BadCacheSynchronization,CPULoad,DatabaseCleanup,DatabaseSlowdown,FetchSizeTooSmall,JourneySearchError404,JourneySearchError500,LoginProblems,MobileErrors,TravellersOptionBox
         image: dynatrace/easytravel-loadgen
-#        imagePullPolicy: Always
+        imagePullPolicy: Always
         name: loadgen
         resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
       restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
 status: {}
